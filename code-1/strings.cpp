@@ -15,8 +15,6 @@ bool isPalindrome(char arr[], int n){
         }
         return 1;
 }
-
-
 int main(){
         char name[20];
         cout<< "Enter the Character : ";
