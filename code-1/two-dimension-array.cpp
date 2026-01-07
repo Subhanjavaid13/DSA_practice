@@ -14,7 +14,6 @@ bool findTarget(int arr[][4], int target, int row, int col) {
 
 int main() {
     int arr[3][4];
-
     cout << "Enter elements : ";
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 4; j++) {
