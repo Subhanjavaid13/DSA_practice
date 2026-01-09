@@ -13,7 +13,6 @@ int main(){
         // q = q+1;
         // cout<< q<<endl;
         // cout<< *q<<endl;
-
         int n = 10;
         int m = 5;
         int *ptr = &n;
