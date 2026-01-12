@@ -24,5 +24,6 @@ int main(){
         int ans = printSum(arr,n);
 
         cout << "sum is : "<<ans;
+        delete []arr;
 
 }
