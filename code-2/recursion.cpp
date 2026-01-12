@@ -10,11 +10,20 @@ int fact(int n){
         return biggerProblem;
 }
 
+int power(int n){
+        if(n == 0)
+                return 1;
+        int sp = power(n-1);
+        int bg = 2*sp;
+        return bg;
+}
+
 int main(){
 
         int n;
         cout<<"Enter Num : ";
         cin>> n;
-        cout<<fact(n);
+        cout<<power(n);
+        // cout<<fact(n);
         return 0;
 }
