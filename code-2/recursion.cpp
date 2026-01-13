@@ -32,14 +32,31 @@ int fibonacciSeries(int n){
         }
         return fibonacciSeries(n-1)+fibonacciSeries(n-2);
 }
+
+void sayDigit(int n , string arr[]){
+        if(n==0)
+                return;
+
+        int digit = n%10;
+        n = n/10;
+        sayDigit(n,arr);
+        cout<<arr[digit]<<" ";
+}
+
 int main(){
 
+        string arr[10] = {"zero","one","two","three","four",
+        "five","six","seven","eight","nine"};
+        
         int n;
         cout<<"Enter Num : ";
         cin>> n;
+        sayDigit(n,arr);
+
+
         // cout<<power(n);
         // cout<<fact(n);
         // cout<<counting(n);
-        cout<<fibonacciSeries(n);
+        // cout<<fibonacciSeries(n);
         return 0;
 }
