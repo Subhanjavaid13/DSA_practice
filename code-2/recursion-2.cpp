@@ -32,11 +32,10 @@ bool linearSearch(int *arr , int size , int key){
                 return remainingCheck;
         }
 }
-
 int main(){
 
-        int arr[10] = {0,2,5,6,10,12,35,45,67,81};
-        int size = 10;
+        int arr[7] = {0,2,5,6,10,12,35};
+        int size = 7;
         bool ans = isSorted(arr,size);
         if(ans == 1){
                 cout<<"sorted "<<endl;
