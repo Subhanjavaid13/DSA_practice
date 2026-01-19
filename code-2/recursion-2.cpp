@@ -45,8 +45,7 @@ int main(){
         }
         int brr[5] = {1,2,4,3,5};
         cout<< sumOfArray(brr,5);
-
-        int crr[10] = {0,2,5,6,10,12,35,45,67,81};
+        int crr[10] = {0,2,4,3,10,15,35,45,56,91};
         int key ;
         cout<< "Enter you key here : ";
         cin>> key;
