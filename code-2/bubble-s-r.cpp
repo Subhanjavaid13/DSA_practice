@@ -2,7 +2,6 @@
 using namespace std;
 
 //bubble sort through recursion
-
 void bubbleSort(int *arr , int n){
         if(n == 0 || n==1){
                 return ;
@@ -17,8 +16,7 @@ void bubbleSort(int *arr , int n){
         bubbleSort(arr,n-1);
 }
 int main(){
-
-        int arr[10] = {5,3,1,4,2,8,6,7,9,10};
+        int arr[10] = {5,10,11,33,12,19,55,88,1,10};
         bubbleSort(arr,10);
         for(int i =0 ; i<10 ; i++){
                 cout<<arr[i];
