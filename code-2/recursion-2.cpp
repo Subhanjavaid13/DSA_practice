@@ -45,7 +45,7 @@ int main(){
         }
         int brr[5] = {1,2,4,3,5};
         cout<< sumOfArray(brr,5);
-        int crr[10] = {0,2,4,3,10,15,35,45,56,91};
+        int crr[10] = {0,2,12,33,15,29,44,14,58,26};
         int key ;
         cout<< "Enter you key here : ";
         cin>> key;
@@ -54,7 +54,6 @@ int main(){
                 cout<<"Element is present ";
         }else{
                 cout<<"Element is not present ";
-
         }
         return 0;
 }

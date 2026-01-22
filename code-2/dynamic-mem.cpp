@@ -8,19 +8,16 @@ int printSum(int *arr , int n){
         }
         return sum;
 }
-
 int main(){
         int n;
         cout<<"Enter : ";
         cin>> n;
 
         int *arr = new int[n];
-
         cout<<"Enter Numbers : ";
         for(int i = 0 ; i<n; i++){        
                 cin>>arr[i];
         }
-
         int ans = printSum(arr,n);
 
         cout << "sum is : "<<ans;
