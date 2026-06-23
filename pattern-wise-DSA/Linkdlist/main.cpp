@@ -89,14 +89,28 @@ class List {
 
         }
     }
-    void pop_back(){
+    void pop_front(){
         if(head==NULL){
             cout<<"LindList is empty";
+            return;
         }
         Node* temp = head;
         head = head->next;
         temp->next = NULL;
         delete temp;
+    }
+    void pop_back(){
+        if(head==NULL){
+            cout<<"LindList is empty";
+            return;
+        }
+        Node* temp = head;
+        while(temp->next != tail){
+            temp = temp->next;
+        }
+        temp->next = NULL;
+        delete tail;
+        tail = temp;
     }
     void printLL(){
         Node *temp = head;
@@ -110,10 +124,12 @@ class List {
 
 int main(){
     List ll;
+    ll.push_front(4);
     ll.push_front(3);
     ll.push_front(2);
-    ll.push_front(1);
-    ll.push_back(4);
+    ll.push_back(1);
+    ll.printLL();
+    ll.pop_front();
     ll.printLL();
     ll.pop_back();
     ll.printLL();
