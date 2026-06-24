@@ -112,13 +112,43 @@ class List {
         delete tail;
         tail = temp;
     }
+    void insert_at_middle(int val , int pos){
+        if(pos<0){
+            return;
+        }
+        if(pos == 0){
+            cout<< "position is zero "<<endl;
+            push_front(val);
+            return;
+        }
+        Node* temp = head;
+        for(int i =0; i < pos-1; i++){
+            temp = temp->next;
+        }
+        Node* newNode = new Node(val);
+        newNode->next = temp->next;
+        temp->next = newNode;
+
+    }
+    int search_ll(int key){
+        Node* temp = head;
+        int index = 0;
+        while(temp != NULL){
+            if(temp->data == key){
+                return index;
+            }
+            temp = temp->next;
+            index++;
+        }
+        return -1;
+    }
     void printLL(){
         Node *temp = head;
         while(temp != NULL){
-            cout<<temp->data;
+            cout<<temp->data<<"->";
             temp = temp->next;
         }
-        cout<<endl;
+        cout<<"NULL"<<endl;
     }
 };
 
@@ -127,12 +157,17 @@ int main(){
     ll.push_front(4);
     ll.push_front(3);
     ll.push_front(2);
-    ll.push_back(1);
+    ll.push_front(1);
+    ll.push_back(5);
     ll.printLL();
-    ll.pop_front();
-    ll.printLL();
-    ll.pop_back();
-    ll.printLL();
+    cout<<ll.search_ll(3);
+    // ll.insert_at_middle(8,3);   
+    // ll.printLL();
+    // ll.insert_at_middle(9,0);         
+    // ll.pop_front();
+    // ll.printLL();
+    // ll.pop_back();
+    // ll.printLL();
     
     return 0;
 }   
