@@ -40,6 +40,24 @@ class DoublyList{
         }
 
     }
+    void pop_front(){
+        Node* temp = head;
+        head = head->next;
+        if(head!=NULL){
+            head->prev =NULL;
+        }
+        temp->next = NULL;
+        delete temp;
+    }
+    void pop_back(){
+        Node* temp = tail;
+        tail = tail->prev;
+        if(tail!=NULL){
+            tail->next =NULL;
+        }
+        temp->prev = NULL ;
+        delete temp;
+    }
 
     void printDLL(){
         Node* temp = head;
@@ -57,6 +75,9 @@ int main(){
     dll.push_front(2);
     dll.push_front(3);
     dll.push_back(5);
+    dll.printDLL();
+    dll.pop_front(); 
+    dll.pop_back(); 
     dll.printDLL();
 
     return 0;
